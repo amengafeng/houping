@@ -1,0 +1,45 @@
+/*
+* @Author: ameng
+* @Date:   2016-04-22 09:50:34
+* @Last Modified by:   ameng
+* @Last Modified time: 2016-04-22 21:47:48
+*/
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+@media print {
+  .container {
+    width: auto;
+  }
+}
+body{font: 14px/24px "Oxygen",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;background:#ffffff url("images/body-bg.png") no-repeat center top;}
+ul,li{margin:0;padding:0;}
+a{color:#555555;}/*white-space: nowrap;overflow: hidden;  text-overflow: ellipsis;*/
+a:hover{color:#ff0000;text-decoration: none;}
+.fl{float:left;}.fr{float:right;}.md{margin-left:15px;}.cl10{visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 10px;}
+.m-b-15{margin-bottom: 15px;}
+.xq{color:#0094d2;}
+.xq:hover{color:red;}
+
+a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer , .list.lh24.f14{
+       cursor: pointer;
+}
+
+/*首页*/
+.banner{height:200px;background:url("images/main.png") no-repeat right top;}
+.banner a{display:block;width:621px;height:87px;padding-top:60px;}
+/*导航*/
+.nav-daohang{height: 60px;background: #0094d2;border-radius:5px 5px 0px 0px;-webkit-border-radius:5px 5px 0px 0px;-moz-border-radius:5px 5px 0px 0px}
+.nav-con{width: 1000px;margin:0 auto;}
+.nav-con ul{padding:0;}
+.nav-con ul li{width: 110px;line-height: 60px; float:left;list-style: none;text-align: center;}
+.nav-con ul li:hover a{text-shadow: 0px 0px 20px #ffffff;color:#ff0000;}
+.nav-con ul li a{color:#ffffff;font-size:18px;}
+
+
+.footer{
+	margin-top:20px;
+	padding:20px;
+}
