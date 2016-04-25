@@ -2,7 +2,7 @@
 * @Author: ameng
 * @Date:   2016-04-22 09:50:34
 * @Last Modified by:   ameng
-* @Last Modified time: 2016-04-22 21:47:48
+* @Last Modified time: 2016-04-25 11:21:35
 */
 @-webkit-viewport   { width: device-width; }
 @-moz-viewport      { width: device-width; }
@@ -38,8 +38,57 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 .nav-con ul li:hover a{text-shadow: 0px 0px 20px #ffffff;color:#ff0000;}
 .nav-con ul li a{color:#ffffff;font-size:18px;}
 
+.background-bg{
+	background:#abc;
+}
+.huandeng{
+	width:350px;
+	height:250px;
+}
+.news{
+	width:430px;
+	height:250px;
+	margin-left:10px;
+}
+.gonggao{
+	width:200px;
+	height:250px;
+}
+.houping{
+	width:205px;
+	height:270px;
+}
+.zhengwugongkai{
+	margin-left:10px;	
+}
+.xiaokangchuangjian,.zhengwugongkai{
+	width:387px;
+	height:270px;	
+}
+.tel{
+	width:205px;
+	height:268px;
+}
+.houpingfengguang{
+	width:1000px;
+	height:220px;
+}
+.links{
+	width:1000px;
+	height:120px;
+}
+
+
+.h2-font{
+	font-size: 18px;
+	margin:0;
+	padding:0;
+}
 
 .footer{
 	margin-top:20px;
 	padding:20px;
+}
+.footer .text-center a{
+	color:#ffffff;
 }
