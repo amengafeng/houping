@@ -2,7 +2,7 @@
 * @Author: ameng
 * @Date:   2016-04-22 09:50:34
 * @Last Modified by:   ameng
-* @Last Modified time: 2016-04-25 16:27:51
+* @Last Modified time: 2016-05-03 11:11:36
 */
 @-webkit-viewport   { width: device-width; }
 @-moz-viewport      { width: device-width; }
@@ -38,9 +38,6 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 .nav-con ul li:hover a{text-shadow: 0px 0px 20px #ffffff;color:#ff0000;}
 .nav-con ul li a{color:#ffffff;font-size:18px;}
 
-.background-bg{
-	background:#abc;
-}
 .huandeng{
 	width:350px;
 	height:250px;
@@ -77,8 +74,20 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 	width:1000px;
 	height:120px;
 }
-
-
+.list-ul{
+	margin-left: 10px;
+}
+.list-ul a{
+	white-space: nowrap;overflow: hidden;  text-overflow: ellipsis;
+}
+.gonggao .list-ul li{
+	height:24px;
+}
+.gonggao .list-ul a{
+	width:100px;
+	height:24px;
+	white-space: nowrap;overflow: hidden;  text-overflow: ellipsis;
+}
 .h2-font{
 	font-size: 18px;
 	margin:0;
