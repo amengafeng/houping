@@ -2,7 +2,7 @@
 * @Author: ameng
 * @Date:   2016-04-22 09:50:34
 * @Last Modified by:   ameng
-* @Last Modified time: 2016-05-03 11:11:36
+* @Last Modified time: 2016-05-10 21:35:24
 */
 @-webkit-viewport   { width: device-width; }
 @-moz-viewport      { width: device-width; }
@@ -42,6 +42,18 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 	width:350px;
 	height:250px;
 }
+/* 焦点图 */
+.focusBox { float: left; position: relative; width: 350px; height: 250px;  overflow: hidden; font-family:Arial; text-align: left; background:#fff; border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px}
+.focusBox .pic img { width: 350px; height: 250px; display: block; position:absolute; top:0px;}
+.focusBox .txt-bg { position: absolute; bottom: 0; z-index: 1; height: 36px; width:100%;  background: #000; filter: alpha(opacity=40); opacity: 0.4; overflow: hidden; }
+.focusBox .txt { position: absolute; bottom: 0; z-index: 2; height: 36px; width:100%; overflow: hidden; }
+.focusBox .txt li{ height:36px; line-height:36px; position:absolute; bottom:-36px;}
+.focusBox .txt li a{ display: block; color: white; padding: 0 0 0 10px; font-size: 13px; font-weight: bold; text-decoration: none; }
+.focusBox .num { position: absolute; z-index: 3; bottom: 8px; right: 8px; }
+.focusBox .num li{ float: left; position: relative; width: 22px; height: 20px; line-height: 20px; overflow: hidden; text-align: center; margin-right: 1px; cursor: pointer; }
+.focusBox .num li a,.focusBox .num li span { position: absolute; z-index: 2; display: block; color: white; width: 100%; height: 100%; top: 0; left: 0; text-decoration: none; }
+.focusBox .num li span { z-index: 1; background: black; filter: alpha(opacity=50); opacity: 0.5; }
+.focusBox .num li.on a,.focusBox .num a:hover{ background:#0094D2;  }
 .news{
 	width:430px;
 	height:250px;
@@ -50,6 +62,7 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 .gonggao{
 	width:200px;
 	height:250px;
+	overflow-y: hidden;
 }
 .houping{
 	width:205px;
@@ -72,21 +85,39 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 }
 .links{
 	width:1000px;
-	height:120px;
+	min-height:120px;
 }
-.list-ul{
-	margin-left: 10px;
+.list-ul li a{
+	display:list-item;
+	list-style:inside square;
+	list-style-type: disc;
+	white-space: nowrap;overflow: hidden; text-overflow: ellipsis;
 }
-.list-ul a{
-	white-space: nowrap;overflow: hidden;  text-overflow: ellipsis;
+.list-ul li{
+	list-style: none;
 }
-.gonggao .list-ul li{
+.news .list-ul .pull-left{
+	width:338px;
+}
+.list-ul .pull-right{
+	width:50px;
+	text-align: right;
+}
+.gonggao li{
+	height:24px; line-height:24px; white-space: nowrap;overflow: hidden; text-overflow: ellipsis;
+}
+.gonggao li time{
+	color:#999;
+	margin-right:5px;
+}
+.gonggao li a{
+}
+.panel-body{
+	overflow: hidden;
+}
+.zhengwugongkai .list-ul li a,.xiaokangchuangjian .list-ul li a{
+	width:355px;
 	height:24px;
-}
-.gonggao .list-ul a{
-	width:100px;
-	height:24px;
-	white-space: nowrap;overflow: hidden;  text-overflow: ellipsis;
 }
 .h2-font{
 	font-size: 18px;
@@ -96,7 +127,16 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img{
 	height:250px;
 }
-
+/* 图片滚动 */
+.picScroll{ position:relative;  height:154px; padding: 0px 0 10px 35px;  background:#fff; margin-bottom:10px; overflow:hidden;   }
+.picScroll ul{ overflow:hidden; zoom:1; }
+.picScroll ul li{ float:left; margin: 0 5px;  width:170px; overflow:hidden; display:inline; text-align: center;}
+.picScroll ul li img{ width:170px; height:124px; }
+.picScroll .prev,
+.picScroll .next{ position:absolute;  left:0px; top: 60px; display:block; width:18px; height:28px; overflow:hidden; background:url(images/icons.png) -40px 0 no-repeat; cursor:pointer;  }
+.picScroll .next{ left:auto; right:0px; background-position:-120px 0; }
+.picScroll .prevStop{ background-position:0 0; }
+.picScroll .nextStop{ background-position:-80px 0; }
 .footer{
 	width:1000px;
 	margin:0 auto;

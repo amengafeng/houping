@@ -15,6 +15,7 @@
     </style>
     <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
 	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="jquery.SuperSlide.2.1.js"></script>
 	<!--[if lt IE 9]>
 	     <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	     <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
@@ -68,107 +69,127 @@
 	</div>
 	<div class="cl10"></div>
 	<!-- 幻灯 -->
-	<div id="carousel-example-generic" class="carousel slide huandeng pull-left" data-ride="carousel">
-	  	<ol class="carousel-indicators">
-		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-		    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-	  	</ol>
+	<div class="huandeng pull-left">
+		<!-- 焦点图 S -->
+		<div class="focusBox">
+				<ul class="pic">
+						<li><a href=""><img src="images/ad1.png" width="350" height="250"/></a></li>
+						<li><a href=""><img src="images/ad2.png"/></a></li>
+						<li><a href=""><img src="images/body-bg.png"/></a></li>
+						<li><a href=""><img src="images/logo.png"/></a></li>
+				</ul>
+				<div class="txt-bg"></div>
+				<div class="txt">
+					<ul>
+						<li><a href="#">便民服务便民服务</a></li>
+						<li><a href="#">便民服务便民服务便民服务</a></li>
+						<li><a href="#">便民服务</a></li>
+						<li><a href="#">便民服务便民服务便民服务便民服务</a></li>
+					</ul>
+				</div>
 
-		<div class="carousel-inner" role="listbox">
-		    <div class="item active">
-		      	<img src="images/body-bg.png" alt="..." width="350" height="250">
-		      	<div class="carousel-caption">
-		        	<h3>脱贫攻坚</h3>
-		        	<p>脱贫攻坚脱贫攻坚脱贫攻坚脱贫攻坚脱贫攻坚脱贫攻坚脱贫攻坚脱贫攻坚脱贫攻坚</p>
-		      	</div>
-		    </div>
-		    <div class="item">
-		      	<img src="images/ad1.png" alt="..." width="350" height="250">
-		      	<div class="carousel-caption">
-		        	<h3>脱贫攻坚</h3>
-		        	<p>脱贫攻坚脱贫攻坚脱贫攻坚脱贫攻坚脱贫攻坚脱贫攻坚脱贫攻坚脱贫攻坚脱贫攻坚</p>	
-		      	</div>
-		    </div>
-		    <div class="item">
-		      	<img src="images/ad2.png" alt="..." width="350" height="250">
-		      	<div class="carousel-caption">
-		        	<h3>脱贫攻坚</h3>
-		        	<p>脱贫攻坚脱贫攻坚脱贫攻坚脱贫攻坚脱贫攻坚脱贫攻坚脱贫攻坚脱贫攻坚脱贫攻坚</p>
-		      	</div>
-		    </div>
+				<ul class="num">
+					<li><a>1</a><span></span></li>
+					<li><a>2</a><span></span></li>
+					<li><a>3</a><span></span></li>
+					<li><a>4</a><span></span></li>
+				</ul>
 		</div>
+		<script type="text/javascript">
+			jQuery(".focusBox").slide({ titCell:".num li", mainCell:".pic",effect:"fold", autoPlay:true,trigger:"click",
+				//下面startFun代码用于控制文字上下切换
+				startFun:function(i){
+					 jQuery(".focusBox .txt li").eq(i).animate({"bottom":0}).siblings().animate({"bottom":-36});
+				}
+			});
+		</script>
+		<!-- 焦点图 E -->
 
-		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-		    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-		    <span class="sr-only">Previous</span>
-		</a>
-		<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-		    <span class="sr-only">Next</span>
-		</a>
 	</div>
 	<!-- 新闻中心 -->
 	<div class="news pull-left panel panel-info">
 		<div class="panel-heading">
-			<h2 class="h2-font"><i class="fa fa-newspaper-o" aria-hidden="true"></i>&nbsp;<a href="javascript:;">新闻中心</a></h2>
+			<h2 class="h2-font"><i class="text-primary fa fa-newspaper-o" aria-hidden="true"></i>&nbsp;<a href="javascript:;">新闻中心</a></h2>
 		</div>
 		<div class="panel-body">
 		 	<ul class="list-ul">
-		 	  <li><a href="">沿河土家族自治县后坪乡位于县西北角</a><time datetime="" class="pull-right">05-03</time></li>
-		 	  <li><a href="">沿河土家族自治县后坪乡位于县西北角</a><time datetime="" class="pull-right">05-03</time></li>
-		 	  <li><a href="">沿河土家族自治县后坪乡位于县西北角沿河土家族自治县后坪乡位于县西北角</a><time datetime="" class="pull-right">05-03</time></li>
-		 	  <li><a href="">沿河土家族自治县后坪乡位于县西北角</a><time datetime="" class="pull-right">05-03</time></li>
-		 	  <li><a href="">沿河土家族自治县后坪乡位于县西北角</a><time datetime="" class="pull-right">05-03</time></li>
-		 	  <li><a href="">沿河土家族自治县后坪乡位于县西北角</a><time datetime="" class="pull-right">05-03</time></li>
-		 	  <li><a href="">沿河土家族自治县后坪乡位于县西北角</a><time datetime="" class="pull-right">05-03</time></li>
+		 	  <li><a href="" class="pull-left">沿河土家族自治县后坪乡位于县西北角</a><time datetime="" class="pull-right">05-03</time></li>
+		 	  <li><a href="" class="pull-left">沿河土家族自治县后坪乡位于县西北角</a><time datetime="" class="pull-right">05-03</time></li>
+		 	  <li><a href="" class="pull-left">沿河土家族自治县后坪乡位于县西北角沿河土家族自治县后坪乡位于县西北角</a><time datetime="" class="pull-right">05-03</time></li>
+		 	  <li><a href="" class="pull-left">沿河土家族自治县后坪乡位于县西北角</a><time datetime="" class="pull-right">05-03</time></li>
+		 	  <li><a href="" class="pull-left">沿河土家族自治县后坪乡位于县西北角</a><time datetime="" class="pull-right">05-03</time></li>
+		 	  <li><a href="" class="pull-left">沿河土家族自治县后坪乡位于县西北角</a><time datetime="" class="pull-right">05-03</time></li>
+		 	  <li><a href="" class="pull-left">沿河土家族自治县后坪乡位于县西北角</a><time datetime="" class="pull-right">05-03</time></li>
 		 	</ul>
 		</div>
 	</div>
 	<!-- 公示公告 -->
 	<div class="gonggao pull-right panel panel-info">
 			<div class="panel-heading">
-				<h2 class="h2-font"><i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;<a href="javascript:;">公示公告</a></h2>
+				<h2 class="h2-font"><i class="text-primary fa fa-bullhorn" aria-hidden="true"></i>&nbsp;<a href="javascript:;">公示公告</a></h2>
 			</div>
-			<div class="panel-body">
+			<div class="panel-body" id="gonggao">
 			 	
-			 	<ul class="list-ul">
-			 	  <li><a href="">沿河土家族自治县后坪乡位于县西北角</a><time datetime="" class="pull-right">05-03</time></li>
-			 	  <li><a href="">沿河土家族自治县后坪乡位于县西北角</a><time datetime="" class="pull-right">05-03</time></li>
-			 	  <li><a href="">沿河土家族自治县后坪乡位于县西北角</a><time datetime="" class="pull-right">05-03</time></li>
-			 	  <li><a href="">沿河土家族自治县后坪乡位于县西北角</a><time datetime="" class="pull-right">05-03</time></li>
-			 	  <li><a href="">沿河土家族自治县后坪乡位于县西北角</a><time datetime="" class="pull-right">05-03</time></li>
-			 	  <li><a href="">沿河土家族自治县后坪乡位于县西北角</a><time datetime="" class="pull-right">05-03</time></li>
-			 	  <li><a href="">沿河土家族自治县后坪乡位于县西北角</a><time datetime="" class="pull-right">05-03</time></li>
+			 	<ul class="list-style">
+
+					<li><time datetime="">05-03</time><a href="" >沿河土家族自治县后坪乡位于县西北角沿河土家族自治县后坪乡位于县西北角</a></li>
+					<li><time datetime="">05-03</time><a href="" >沿河土家族自治县后坪族</a></li>
+					<li><time datetime="">05-03</time><a href="" >沿河土家族自治县后坪乡位于县西北角沿河土家族自治县后坪乡位于县西北角</a></li>
+					<li><time datetime="">05-03</time><a href="" >沿河土家族自治县后坪乡位于县西北角沿河土家族自治县后坪乡位于县西北角</a></li>
+					<li><time datetime="">05-03</time><a href="" >沿河土家族自治县后坪乡位于县西北角沿河土家族自治县后坪乡位于县西北角</a></li>
+					<li><time datetime="">05-03</time><a href="" >沿河土家族自治县后坪乡位于县西北角沿河土家族自治县后坪乡位于县西北角</a></li>
+					<li><time datetime="">05-03</time><a href="" >沿河土家族自治县后坪乡位于县西北角沿河土家族自治县后坪乡位于县西北角</a></li>
+					<li><time datetime="">05-03</time><a href="" >沿河土家族自治县后坪乡位于县西北角沿河土家族自治县后坪乡位于县西北角</a></li>
+					<li><time datetime="">05-03</time><a href="" >沿河土家族自治县后坪乡位于县西北角沿河土家族自治县后坪乡位于县西北角</a></li>
 			 	</ul>
 			</div>
+			<script type="text/javascript">jQuery("#gonggao").slide({ mainCell:"ul",autoPlay:true,effect:"topMarquee",interTime:100,vis:7  });</script>
+
 	</div>
 	<div class="cl10"></div>
 	<!-- 走进后坪 -->
 	<div class="houping pull-left panel panel-info">
 		<div class="panel-heading">
-			<h2 class="h2-font"><i class="fa fa-google-wallet" aria-hidden="true"></i>&nbsp;<a href="javascript:;">走进后坪</a></h2>
+			<h2 class="h2-font"><i class="text-primary fa fa-google-wallet" aria-hidden="true"></i>&nbsp;<a href="javascript:;">走进后坪</a></h2>
 		</div>
 		<div class="panel-body">
-		 	<p>沿河土家族自治县后坪乡位于县西北角（1914至1941年为后坪古县衙所在地），距县城178千米。北部与彭水自治县交界，西部与遵义市务川自治县接壤，东部 与 塘 坝乡...>>【详情】</p>
+		 	<p>后坪乡，为贵州省铜仁市沿河县下辖的一个乡，位于县西北角（1914至1941年为后坪古县衙所在地），是沿河最边远的乡，距县城178千米。北部与彭水自治县交界，西部与遵义市务川自治县接壤，东...>><a href="" class="xq">【详情】</a></p>
 		</div>
 	</div>
 	<!-- 政务公开 -->
 	<div class="zhengwugongkai pull-left panel panel-info">
 		<div class="panel-heading">
-			<h2 class="h2-font"><i class="fa fa-clipboard" aria-hidden="true"></i>&nbsp;<a href="javascript:;">政务公开</a></h2>
+			<h2 class="h2-font"><i class="text-primary fa fa-clipboard" aria-hidden="true"></i>&nbsp;<a href="javascript:;">政务公开</a></h2>
 		</div>
 		<div class="panel-body">
-		 
+		 	<ul class="list-ul">
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	</ul>
 		</div>
 	</div>
 	<!-- 小康创建 -->
 	<div class="xiaokangchuangjian pull-right panel panel-info">
 		<div class="panel-heading">
-			<h2 class="h2-font"><i class="fa fa-key" aria-hidden="true"></i>&nbsp;<a href="javascript:;">小康创建</a></h2>
+			<h2 class="h2-font"><i class="text-primary fa fa-key" aria-hidden="true"></i>&nbsp;<a href="javascript:;">小康创建</a></h2>
 		</div>
 		<div class="panel-body">
-		 
+		 	<ul class="list-ul">
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	</ul>
 		</div>
 	</div>
 	<div class="cl10"></div>
@@ -184,39 +205,99 @@
 	<!-- 脱贫攻坚 -->
 	<div class="zhengwugongkai pull-left panel panel-info">
 		<div class="panel-heading">
-			<h2 class="h2-font"><i class="fa fa-thumbs-up" aria-hidden="true"></i>&nbsp;<a href="javascript:;">脱贫攻坚</a></h2>
+			<h2 class="h2-font"><i class="text-primary fa fa-thumbs-up" aria-hidden="true"></i>&nbsp;<a href="javascript:;">脱贫攻坚</a></h2>
 		</div>
 		<div class="panel-body">
-		 
+		 	<ul class="list-ul">
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	</ul>
 		</div>
 	</div>
 	<!-- 便民服务 -->
 	<div class="xiaokangchuangjian pull-right panel panel-info">
 		<div class="panel-heading">
-			<h2 class="h2-font"><i class="fa fa-server" aria-hidden="true"></i>&nbsp;<a href="javascript:;">便民服务</a></h2>
+			<h2 class="h2-font"><i class="text-primary fa fa-server" aria-hidden="true"></i>&nbsp;<a href="javascript:;">便民服务</a></h2>
 		</div>
 		<div class="panel-body">
-		 
+		 	<ul class="list-ul">
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	  <li><a href="" >沿河土家族自治县后坪乡位于县西北角</a></li>
+		 	</ul>
 		</div>
 	</div>
 	<div class="cl10"></div>
 	<!-- 后坪风光 -->
 	<div class="houpingfengguang panel panel-info">
 		<div class="panel-heading">
-			<h2 class="h2-font"><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp;<a href="javascript:;">后坪风光</a></h2>
+			<h2 class="h2-font"><i class="text-primary fa fa-picture-o" aria-hidden="true"></i>&nbsp;<a href="javascript:;">后坪风光</a></h2>
 		</div>
 		<div class="panel-body">
-		 
+		 	<div class="picScroll">
+				<ul>
+					<li><a href="#"><img src="images/ad1.png" />就历史记录</a></li>
+					<li><a href="#"><img src="images/ad2.png" />桑德菲杰打开了圣诞节就历史记录</a></li>
+					<li><a href="#"><img src="images/body-bg.png" />桑德菲杰打开了圣诞节就历史记录</a></li>
+					<li><a href="#"><img src="images/logo.png" />桑德菲杰打开了圣诞节就历史记录</a></li>
+					<li><a href="#"><img src="images/mail.png" />桑史记录</a></li>
+					<li><a href="#"><img src="images/main.png" />桑德菲杰打开了圣诞节就历史记录</a></li>
+					<li><a href="#"><img src="images/telme.png" />桑德菲杰打开了圣诞节就历史记录</a></li>
+					<li><a href="#"><img src="images/telme.png" />桑德菲杰打开了圣诞节就历史记录</a></li>
+					<li><a href="#"><img src="images/main.png" />桑德菲杰打开了圣诞节就历史记录</a></li>
+				</ul>
+				<a class="prev"></a>
+				<a class="next"></a>
+			</div>
+			<script type="text/javascript">jQuery(".picScroll").slide({ mainCell:"ul",autoPlay:true,effect:"left", vis:5, scroll:2, autoPage:true, pnLoop:true });</script>
 		</div>
 	</div>
 	<div class="cl10"></div>
 	<!-- 友情链接 -->
 	<div class="links panel panel-info">
 		<div class="panel-heading">
-			<h2 class="h2-font"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;<a href="javascript:;">友情链接</a></h2>
+			<h2 class="h2-font"><i class="text-primary fa fa-link" aria-hidden="true"></i>&nbsp;<a href="javascript:;">友情链接</a></h2>
 		</div>
 		<div class="panel-body">
-		 
+		 	<ul class="list-inline">
+				<li><a href="http://www.tongren.gov.cn" target="_blank">铜仁网</a></li>
+				<li><a href="http://hao.gzfjs.gov.cn" target="_blank">铜仁网址导航</a></li>
+				<li><a href="http://www.gzfjs.gov.cn" target="_blank">贵州梵净山旅游网</a></li>
+		 	  	<li><a href="http://www.trdqkjj.gov.cn/" target="_blank">铜仁科技局</a></li>
+				<li><a href="http://trsww.trren.cn/" target="_blank">铜仁水务局</a></li>
+				<li><a href="http://www.trzxgov.com" target="_blank">铜仁市政协网</a></li>
+				<li><a href="http://www.gznwh.cn" target="_blank">贵州傩文化博物馆</a></li>
+				<li><a href="http://www.trjw.gov.cn" target="_blank">铜仁市纪委监察局</a></li>
+				<li><a href="http://www.trsmzw.com" target="_blank">铜仁市民宗委</a></li>
+				<li><a href="http://gztrsj.trren.cn" target="_blank">铜仁市审计局</a></li>
+				<li><a href="http://www.trczj.gov.cn" target="_blank">铜仁市财政局</a></li>
+				<li><a href="http://www.trsgsl.com" target="_blank">铜仁市工商联</a></li>
+				<li><a href="http://www.trggc.com" target="_blank">铜仁高管处</a></li>
+				<li><a href="http://www.trqnw.gov.cn/" target="_blank">共青团铜仁市委</a></li>
+				<li><a href="http://www.trbanker.com" target="_blank">铜仁银行业</a></li>
+				<li><a href="http://www.trygc.cn/" target="_blank">铜仁运政信息网</a></li>
+				<li><a href="http://www.gzfjs.gov.cn" target="_blank">中国梵净山官网</a></li>
+				<li><a href="http://www.trwmb.cn" target="_blank">铜仁文明网</a></li>
+				<li><a href="http://www.trpeace.gov.cn" target="_blank">铜仁长安网</a></li>
+				<li><a href="http://www.trrf.gov.cn/index.html" target="_blank">铜仁市人防办</a></li>
+				<li><a href="http://www.trsafety.gov.cn/index.html" target="_blank">铜仁市安监局</a></li>
+				<li><a href="http://www.trbjzx.gov.cn" target="_blank">碧江区政协网</a></li>
+				<li><a href="http://www.snzzb.gov.cn" target="_blank">思南县委组织部</a></li>
+				<li><a href="http://www.trhsj.com" target="_blank">铜仁市地方海事局</a></li>
+				<li><a href="http://www.trjj.gov.cn" target="_blank">铜仁交警网</a></li>
+
+		 	</ul>
 		</div>
 	</div>
 
